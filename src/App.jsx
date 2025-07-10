@@ -34,7 +34,16 @@ function App() {
         </ul>
       </div>
       {/* instructions */}
-      <div></div>
+      <div className="my-4 border-b-[0.1px] py-4">
+        <h2>Ingredients</h2>
+        <ol className=" space-y-2" style={{marginLeft: "15px"}}>
+          {instructions.map((item) => (
+            <li key={item.id} style={{lineHeight: 1.5}}>
+              <span className="mr-2 text-primary-Brown-800 font-outfit-700 text-xl">{`${item.id}.`}</span>{item.desc}
+            </li>
+          ))}
+        </ol>
+      </div>
     </div>
   );
 }
