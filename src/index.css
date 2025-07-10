@@ -1,0 +1,57 @@
+@font-face {
+  font-family: youngSerif-400;
+  src: url("../public/assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+@font-face {
+  font-family: outfit-400;
+  src: url("../public/assets/fonts/outfit/static/Outfit-Regular.ttf");
+}
+
+@font-face {
+  font-family: outfit-600;
+  src: url("../public/assets/fonts/outfit/static/Outfit-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: outfit-700;
+  src: url("../public/assets/fonts/outfit/static/Outfit-Bold.ttf");
+}
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary-stone-100: hsl(30, 54%, 90%);
+  --color-primary-stone-150: hsl(30, 18%, 87%);
+  --color-primary-Stone-600: hsl(30, 10%, 34%);
+  --color-primary-Stone-900: hsl(24, 5%, 18%);
+  --color-primary-Brown-800: hsl(14, 45%, 36%);
+  --color-primary-Rose-800: hsl(332, 51%, 32%);
+  --color-primary-Rose-50: hsl(330, 100%, 98%);
+  --font-youngSerif-400: youngSerif-400, "sans-serif";
+  --font-outfit-400: outfit-400, "sans-serif";
+  --font-outfit-600: outfit-600, "sans-serif";
+  --font-outfit-700: outfit-700, "sans-serif";
+  --font-size: 16px
+}
+
+@layer base {
+p,ul {
+  font-size: var(--font-size);
+  color: var(--color-primary-Stone-600);
+  font-family: var(--font-outfit-400);
+}
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-family: var(--font-youngSerif-400);
+  color: var(--color-primary-Brown-800);
+  font-size: 30px;
+}
+}
+ul {
+  list-style: disc;
+  margin: 10px 10px 10px 20px;
+  line-height: 2;
+}
