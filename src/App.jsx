@@ -35,14 +35,37 @@ function App() {
       </div>
       {/* instructions */}
       <div className="my-4 border-b-[0.1px] py-4">
-        <h2>Ingredients</h2>
-        <ol className=" space-y-2" style={{marginLeft: "15px"}}>
+        <h2>Instructions</h2>
+        <ol className=" space-y-2" style={{ marginLeft: "15px" }}>
           {instructions.map((item) => (
-            <li key={item.id} style={{lineHeight: 1.5}}>
-              <span className="mr-2 text-primary-Brown-800 font-outfit-700 text-xl">{`${item.id}.`}</span>{item.desc}
+            <li key={item.id} style={{ lineHeight: 1.5 }}>
+              <span className="mr-2 text-primary-Brown-800 font-outfit-700 text-xl">{`${item.id}.`}</span>
+              <span className="mr-2 text-primary-Stone-600 font-outfit-700">{`${item.title}: `}</span>
+              {item.desc}
             </li>
           ))}
         </ol>
+      </div>
+      {/* neutrition */}
+      <div className="my-4 border-b-[0.1px] py-4">
+        <h2>Neutrition</h2>
+        <p>
+          The table below show neutrintonsl values per servings without the
+          addintonal fillings.
+        </p>
+        <table className="w-full my-6 flex flex-col gap-2 ">
+          {neutrition.map((item) => (
+            <tr
+              key={item.id}
+              className="border-b border-primary-stone-150 grid grid-cols-2 gap-6"
+            >
+              <td className="pl-18">{item.title}</td>
+              <td className="text-primary-Brown-800 font-outfit-700">
+                {item.value}
+              </td>
+            </tr>
+          ))}
+        </table>
       </div>
     </div>
   );
@@ -99,3 +122,10 @@ const instructions = [
     desc: "Serve hot, with additional salt and pepper if needed.",
   },
 ];
+
+const neutrition = [
+  {id: 1, title: "Calories", value: "277Kcal"},
+  {id: 2, title: "Carbs", value: "0g"},
+  {id: 3, title: "Proten", value: "20g"},
+  {id: 4, title: "Fat", value: "22g"},
+]

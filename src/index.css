@@ -36,7 +36,7 @@
 }
 
 @layer base {
-p,ul,ol {
+p,ul,ol,table {
   font-size: var(--font-size);
   color: var(--color-primary-Stone-600);
   font-family: var(--font-outfit-400);
