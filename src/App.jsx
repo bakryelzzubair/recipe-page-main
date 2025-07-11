@@ -1,71 +1,76 @@
 import omelette from "../public/assets/images/image-omelette.jpeg";
 function App() {
   return (
-    <div className=" container mx-auto px-5 py-5 md:px-20">
-      <img src={omelette} alt="" className="w-full rounded-lg" />
-      <h1 className="font-youngSerif-400 text-primary-Stone-900 capitalize font-semibold py-2">
-        simple omelette recipe
-      </h1>
-      <p className="text-justify">
-        An easy and quick dish, perfect for any meal. This classic omelette
-        combines beaten eggs cooked to perfection, optionally filled with your
-        choice of cheese, vegetables, or meats.
-      </p>
-      <div className="bg-primary-Rose-50 p-6 my-4 rounded-xl">
-        <h3 className="text-primary-Rose-800 font-outfit-700 mb">
-          Preparation time
-        </h3>
-        <ul>
-          {properations.map((item) => (
-            <li key={item.id}>
-              <span className=" text-primary-Stone-600 font-outfit-700">{`${item.title} : `}</span>{" "}
-              {item.desc}
-            </li>
-          ))}
-        </ul>
-      </div>
-      {/* ingredients */}
-      <div className="my-4 border-b-[0.1px] py-4">
-        <h2>Ingredients</h2>
-        <ul>
-          {ingredients.map((item) => (
-            <li key={item.id}>{item.desc}</li>
-          ))}
-        </ul>
-      </div>
-      {/* instructions */}
-      <div className="my-4 border-b-[0.1px] py-4">
-        <h2>Instructions</h2>
-        <ol className=" space-y-2" style={{ marginLeft: "15px" }}>
-          {instructions.map((item) => (
-            <li key={item.id} style={{ lineHeight: 1.5 }}>
-              <span className="mr-2 text-primary-Brown-800 font-outfit-700 text-xl">{`${item.id}.`}</span>
-              <span className="mr-2 text-primary-Stone-600 font-outfit-700">{`${item.title}: `}</span>
-              {item.desc}
-            </li>
-          ))}
-        </ol>
-      </div>
-      {/* neutrition */}
-      <div className="my-4 border-b-[0.1px] py-4">
-        <h2>Neutrition</h2>
-        <p>
-          The table below show neutrintonsl values per servings without the
-          addintonal fillings.
+    <div className=" container mx-auto px-5 py-5 md:px-6 lg:px-32 xl:px-60 2xl:px-100">
+      <div className="bg-white p-10">
+        <img src={omelette} alt="" className="w-full rounded-lg" />
+        <h1 className="font-youngSerif-400 text-primary-Stone-900 capitalize font-semibold pt-8 pb-4 text-2xl sm:text-4xl md:text-5xl">
+          simple omelette recipe
+        </h1>
+        <p className="text-justify sm:text-xl md:text-2xl lg:text-3xl">
+          An easy and quick dish, perfect for any meal. This classic omelette
+          combines beaten eggs cooked to perfection, optionally filled with your
+          choice of cheese, vegetables, or meats.
         </p>
-        <table className="w-full my-6 flex flex-col gap-2 ">
-          {neutrition.map((item) => (
-            <tr
-              key={item.id}
-              className="border-b border-primary-stone-150 grid grid-cols-2 gap-6"
-            >
-              <td className="pl-18">{item.title}</td>
-              <td className="text-primary-Brown-800 font-outfit-700">
-                {item.value}
-              </td>
-            </tr>
-          ))}
-        </table>
+        <div className="bg-primary-Rose-50 p-6 my-4 rounded-xl ">
+          <h3 className="text-primary-Rose-800 font-outfit-700 mb sm:text-xl md:text-2xl lg:text-3xl">
+            Preparation time
+          </h3>
+          <ul className="sm:text-xl md:text-2xl lg:text-3xl">
+            {properations.map((item) => (
+              <li key={item.id}>
+                <span className=" text-primary-Stone-600 font-outfit-700">{`${item.title} : `}</span>{" "}
+                {item.desc}
+              </li>
+            ))}
+          </ul>
+        </div>
+        {/* ingredients */}
+        <div className="my-4 border-b-[0.1px] py-4">
+          <h2 className="sm:text-2xl md:text-4xl my-4">Ingredients</h2>
+          <ul className="sm:text-xl md:text-2xl lg:text-3xl">
+            {ingredients.map((item) => (
+              <li key={item.id}>{item.desc}</li>
+            ))}
+          </ul>
+        </div>
+        {/* instructions */}
+        <div className="my-4 border-b-[0.1px] py-4">
+          <h2 className="sm:text-2xl md:text-4xl my-4">Instructions</h2>
+          <ol
+            className=" space-y-2 sm:text-xl md:text-2xl lg:text-3xl"
+            style={{ marginLeft: "15px" }}
+          >
+            {instructions.map((item) => (
+              <li key={item.id} style={{ lineHeight: 1.5 }}>
+                <span className="mr-2 text-primary-Brown-800 font-outfit-700 text-xl">{`${item.id}.`}</span>
+                <span className="mr-2 text-primary-Stone-600 font-outfit-700">{`${item.title}: `}</span>
+                {item.desc}
+              </li>
+            ))}
+          </ol>
+        </div>
+        {/* neutrition */}
+        <div className="my-4 py-4">
+          <h2 className="sm:text-2xl md:text-4xl my-4">Neutrition</h2>
+          <p className="sm:text-xl md:text-2xl lg:text-3xl">
+            The table below show neutrintonsl values per servings without the
+            addintonal fillings.
+          </p>
+          <table className="w-full my-6 flex flex-col gap-2 sm:text-xl md:text-2xl lg:text-3xl">
+            {neutrition.map((item) => (
+              <tr
+                key={item.id}
+                className="border-b border-primary-stone-150 grid grid-cols-2 gap-6"
+              >
+                <td className="pl-18">{item.title}</td>
+                <td className="text-primary-Brown-800 font-outfit-700">
+                  {item.value}
+                </td>
+              </tr>
+            ))}
+          </table>
+        </div>
       </div>
     </div>
   );
