@@ -13,7 +13,7 @@ dist-ssr
 *.local
 design
 preview.jpg
-readme-template.node_modules
+README-template
 style-guide.md
 
 # Editor directories and files
