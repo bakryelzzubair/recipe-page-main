@@ -68,4 +68,4 @@ To see how you can add code snippets, see below:
 ## Author
 
 - Website - [Add your name here](https://bakryelzzubair-5ii7z7fzk-belzzubairs-projects.vercel.app/)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@bakryelzzubair](https://www.frontendmentor.io/profile/yourusername)
