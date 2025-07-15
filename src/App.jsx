@@ -1,6 +1,6 @@
 // import omelette from "../public/assets/images/image-omelette.jpeg";
 import React from "react";
-// import omelette from "../public/assets/images/image-omelette.jpeg";
+import omelette from "../public/assets/images/image-omelette.jpeg";
 
 const App = () => {
   return (
@@ -9,7 +9,7 @@ const App = () => {
         {/* header */}
         <header className="pb-4">
           <img
-            src="../public/assets/images/image-omelette.jpeg"
+            src={omelette}
             alt="omelette with ages and meate"
             className=" sm:rounded-md"
           />
@@ -49,10 +49,10 @@ const App = () => {
             <h2 className="text-primary-Brown-800 font-outfit text-md sm:text-xl md:text-2xl font-bold md:font-black mb-4">
               Ingredients
             </h2>
-            <ul className=" ml-8 space-y-1">
+            <ul className=" ml-8 space-y-1 auto-numbering">
               {ingredients.map((item) => (
-                <li key={item.id} className="flex items-center">
-                  <span className="text-primary-Brown-800 inline-block mr-4 font-bold sm:font-black">{`${item.id}. `}</span>
+                <li key={item.id} className="">
+                  {/* <span className="text-primary-Brown-800 inline-block mr-4 font-bold sm:font-black">{`${item.id}. `}</span> */}
                   {item.desc}
                 </li>
               ))}
@@ -64,10 +64,9 @@ const App = () => {
             <h2 className="text-primary-Brown-800 font-outfit text-md sm:text-xl md:text-2xl font-bold md:font-black mb-4">
               Instructions
             </h2>
-            <ol className=" ml-8 space-y-1">
+            <ol className=" ml-8 space-y-1 auto-numbering">
               {instructions.map((item) => (
-                <li key={item.id} className="">
-                  <span className="text-primary-Brown-800 mr-4 font-bold sm:font-black">{`${item.id}. `}</span>
+                <li key={item.id}>
                   <span className="text-primary-Stone-600 font-bold sm:font-black mr-1">{`${item.title}: `}</span>
                   {item.desc}
                 </li>
@@ -80,15 +79,20 @@ const App = () => {
             <h2 className="text-primary-Brown-800 font-outfit text-md sm:text-xl md:text-2xl font-bold md:font-black mb-4">
               Neutrition
             </h2>
-            <p>
+            <p className="mb-4">
               The table below shows nutritional values per serving without the
               additional fillings.
             </p>
-            <table>
+            <table className="w-full sm:w-4/5 md:5/6 lg:h-9/12 mx-auto">
               {neutrition.map((item) => (
-                <tr key={item.id}>
+                <tr
+                  key={item.id}
+                  className="border-b border-primary-stone-150 grid grid-cols-2 px-12 gap-x-8"
+                >
                   <td>{item.title}</td>
-                  <td>{item.value}</td>
+                  <td className="text-primary-Brown-800 font-outfit font-bold">
+                    {item.value}
+                  </td>
                 </tr>
               ))}
             </table>
