@@ -31,7 +31,7 @@ const App = () => {
             <h2 className="text-primary-Rose-800 font-outfit text-md sm:text-xl md:text-2xl font-bold md:font-black mb-4">
               Preparation time
             </h2>
-            <ul className=" ml-8 space-y-1">
+            <ul className=" ml-8 space-y-2">
               {preperations.map((item) => (
                 <li key={item.id} className="flex items-center">
                   <span className="w-2 h-2 rounded-full bg-primary-Brown-800 inline-block mr-4"></span>
@@ -45,11 +45,11 @@ const App = () => {
           </section>
 
           {/* ingredients section */}
-          <section className="py-8">
+          <section className="py-8 border-b border-primary-stone-150">
             <h2 className="text-primary-Brown-800 font-outfit text-md sm:text-xl md:text-2xl font-bold md:font-black mb-4">
               Ingredients
             </h2>
-            <ul className=" ml-8 space-y-1 auto-numbering">
+            <ul className=" ml-8 space-y-2 auto-numbering">
               {ingredients.map((item) => (
                 <li key={item.id} className="">
                   {/* <span className="text-primary-Brown-800 inline-block mr-4 font-bold sm:font-black">{`${item.id}. `}</span> */}
@@ -60,11 +60,11 @@ const App = () => {
           </section>
 
           {/* instructions section */}
-          <section className="py-8">
+          <section className="py-8 border-b border-primary-stone-150">
             <h2 className="text-primary-Brown-800 font-outfit text-md sm:text-xl md:text-2xl font-bold md:font-black mb-4">
               Instructions
             </h2>
-            <ol className=" ml-8 space-y-1 auto-numbering">
+            <ol className=" ml-8 space-y-2 auto-numbering">
               {instructions.map((item) => (
                 <li key={item.id}>
                   <span className="text-primary-Stone-600 font-bold sm:font-black mr-1">{`${item.title}: `}</span>
@@ -75,7 +75,7 @@ const App = () => {
           </section>
 
           {/* neutrition section */}
-          <section>
+          <section className="py-8">
             <h2 className="text-primary-Brown-800 font-outfit text-md sm:text-xl md:text-2xl font-bold md:font-black mb-4">
               Neutrition
             </h2>
@@ -83,11 +83,11 @@ const App = () => {
               The table below shows nutritional values per serving without the
               additional fillings.
             </p>
-            <table className="w-full sm:w-4/5 md:5/6 lg:h-9/12 mx-auto">
+            <table className="w-full sm:w-4/5 md:5/6 lg:h-9/12 mx-auto space-y-2">
               {neutrition.map((item) => (
                 <tr
                   key={item.id}
-                  className="border-b border-primary-stone-150 grid grid-cols-2 px-12 gap-x-8"
+                  className="border-b border-primary-stone-150 grid grid-cols-2 px-12 gap-x-8 py-1 sm:py-2"
                 >
                   <td>{item.title}</td>
                   <td className="text-primary-Brown-800 font-outfit font-bold">
