@@ -25,7 +25,7 @@ const App = () => {
           </div>
         </header>
 
-        <div className="px-4 sm:px-0">
+        <main className="px-4 sm:px-0">
           {/* preperation time section */}
           <section className="bg-primary-Rose-50 p-4 sm:p-6 md:p-8 rounded-md">
             <h2 className="text-primary-Rose-800 font-outfit text-md sm:text-xl md:text-2xl font-bold md:font-black mb-4">
@@ -84,20 +84,22 @@ const App = () => {
               additional fillings.
             </p>
             <table className="w-full sm:w-4/5 md:5/6 lg:h-9/12 mx-auto space-y-2">
-              {neutrition.map((item) => (
-                <tr
-                  key={item.id}
-                  className="border-b border-primary-stone-150 grid grid-cols-2 px-12 gap-x-8 py-1 sm:py-2"
-                >
-                  <td>{item.title}</td>
-                  <td className="text-primary-Brown-800 font-outfit font-bold">
-                    {item.value}
-                  </td>
-                </tr>
-              ))}
+              <tbody>
+                {neutrition.map((item) => (
+                  <tr
+                    key={item.id}
+                    className="border-b border-primary-stone-150 grid grid-cols-2 px-12 gap-x-8 py-1 sm:py-2"
+                  >
+                    <td>{item.title}</td>
+                    <td className="text-primary-Brown-800 font-outfit font-bold">
+                      {item.value}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
             </table>
           </section>
-        </div>
+        </main>
       </div>
     </div>
   );

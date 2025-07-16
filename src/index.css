@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 @font-face {
   font-family: youngSerif;
   src: url("../public/assets/fonts/young-serif/YoungSerif-Regular.ttf");
@@ -7,8 +9,6 @@
   font-family: outfit;
   src: url("../public/assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
 }
-
-@import "tailwindcss";
 
 @theme {
   --color-primary-stone-100: hsl(30, 54%, 90%);
@@ -33,9 +33,9 @@ body {
 }
 
 .auto-numbering li::before {
-  content: counter(counter-numbering)". ";
+  content: counter(counter-numbering) ". ";
   color: var(--color-primary-Brown-800);
   display: inline-block;
-  margin-right: 8px;
+  margin-right: .5rem;
   font-weight: bold;
 }
