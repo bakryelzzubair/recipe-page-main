@@ -14,7 +14,7 @@ const App = () => {
             className=" sm:rounded-md"
           />
           <div className="px-4 sm:px-0">
-            <h1 className=" my-4 text-primary-Stone-900 font-youngSerif-400 text-2xl sm:text-3xl md:text-4xl font-black">
+            <h1 className=" my-4 text-primary-Stone-400 font-youngSerif-400 text-2xl sm:text-3xl md:text-4xl font-black">
               Simple Omelette Recipe
             </h1>
             <p>
